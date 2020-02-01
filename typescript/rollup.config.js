@@ -1,7 +1,7 @@
 import json from "rollup-plugin-json"
 import resolve from 'rollup-plugin-node-resolve';
 import common from 'rollup-plugin-commonjs';
-import pkg from "./package.json"
+import pkg from "./package.json.hbs"
 import { dirname } from "path"
 import ts from "@wessberg/rollup-plugin-ts";
 import notify from 'rollup-plugin-notify';
@@ -64,8 +64,8 @@ export default {
 		 * Publishing ES Modules
 		 * To make sure your ES modules are immediately usable by tools that work with CommonJS
 		 * such as Node.js and webpack, you can use Rollup to compile to UMD or CommonJS format,
-		 * and then point to that compiled version with the main property in your package.json file.
-		 * If your package.json file also has a module field, ESM-aware tools like Rollup and webpack 2+
+		 * and then point to that compiled version with the main property in your package.json.hbs file.
+		 * If your package.json.hbs file also has a module field, ESM-aware tools like Rollup and webpack 2+
 		 * will import the ES module version directly.
 		 */
 		{
